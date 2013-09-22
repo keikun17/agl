@@ -3,3 +3,14 @@ div ng-controller="HelloController"
   p
     | {{greeting.text}}, World
 
+  hr
+
+  div ng-controller="CartController"
+    h1 Your Shopping Cart
+    div ng-repeat="item in items"
+      span
+        | {{ item.price | currency }}
+      span
+        | {{ item.price * item.quantity | currency }}
+      button ng-click='remove($index)' Remove
+
