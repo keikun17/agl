@@ -9,6 +9,9 @@ div ng-controller="HelloController"
     h1 Your Shopping Cart
     div ng-repeat="item in items"
       span
+        | {{ item.title }}
+      input ng-model="item.quantity"
+      span
         | {{ item.price | currency }}
       span
         | {{ item.price * item.quantity | currency }}
