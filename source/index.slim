@@ -1,25 +1,5 @@
-div ng-app='hello'
-  div ng-controller="HelloController"
-    input ng-model="greeting.text"
+
+div ng-app='myApp'
+  div ng-controller='TextController'
     p
-      | {{greeting.text}}, World
-
-    hr
-
-    div ng-controller="CartController"
-      h1 Your Shopping Cart
-      div ng-repeat="item in items"
-        span
-          | {{ item.title }}
-        input ng-model="item.quantity"
-        span
-          | {{ item.price | currency }}
-        span
-          | {{ item.price * item.quantity | currency }}
-        button ng-click='remove($index)' class="btn btn-xs btn-danger" Remove
-
-
-  div ng-app='myApp'
-    div ng-controller='TextController'
-      p
-        | {{ someText.message }}
+      | {{ someText.message }}
