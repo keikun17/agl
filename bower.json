@@ -1,0 +1,20 @@
+{
+  "name": "agl",
+  "version": "0.0.0",
+  "homepage": "https://github.com/keikun17/agl",
+  "authors": [
+    "Buddy Magsipoc <keikun17@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.0.8",
+    "bootstrap": "~3.0.0"
+  }
+}
