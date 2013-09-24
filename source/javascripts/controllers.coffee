@@ -2,10 +2,10 @@
 # Basic
 ### #### #### #### #### #### #### #### #### #### #### #### #### #### #### ####
 
+window.StartUpController = ($scope) ->
+  $scope.funding = { startingEstimate: 0 }
+  $scope.computeNeeded = ->
+    $scope.funding.needed = $scope.funding.startingEstimate * 10
 
-window.myAppModule = angular.module("myApp", [])
 
-window.myAppModule.controller "TextController", ($scope) ->
-  someText = {}
-  someText.message = "You have started your journey."
-  $scope.someText = someText
+

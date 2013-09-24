@@ -1,5 +1,7 @@
+div [ng-app]
+  form ng-controller="StartUpController" ng-model="funding.startingEstimate"
+    | Starting :
+    input ng-change="computeNeeded()" ng-model="funding.startingEstimate"
+    | Recommendation : {{ funding.needed }}
 
-div ng-app='myApp'
-  div ng-controller='TextController'
-    p
-      | {{ someText.message }}
+
