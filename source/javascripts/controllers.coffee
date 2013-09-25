@@ -2,15 +2,16 @@
 # Basic
 ### #### #### #### #### #### #### #### #### #### #### #### #### #### #### ####
 
-window.DeathrayMenuController = ($scope) ->
-  $scope.menuState =
-    show: false
+window.HeaderController = ($scope) ->
+  $scope.isError = false
+  $scope.isWarning = false
 
-  $scope.isDisabled = false
+  $scope.showError = ->
+    $scope.messageText = "This is an Error!"
+    $scope.isError = true
+    $scope.isWarning = false
 
-  $scope.toggleMenu = ->
-    console.log($scope)
-    $scope.menuState.show = !$scope.menuState.show;
-
-  $scope.stun = () ->
-    $scope.isDisabled = true
+  $scope.showWarning = ->
+    $scope.messageText = "This is an Warning!"
+    $scope.isError = false
+    $scope.isWarning = true

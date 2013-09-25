@@ -1,9 +1,7 @@
 div [ng-app]
 
-  div ng-controller="DeathrayMenuController"
-    button ng-click="toggleMenu()" Toggle Menu
-    ul ng-show='menuState.show'
-      li class='menu-disabled-{{isDisabled}}' ng-click='stun()' Stun
-      li ng-click="disintegrage()" Disintegrate
-      li ng-click="erase()" Erase from history
+  div ng-controller="HeaderController"
+    div ng-class="{error: isError, warning: isWarning}" Message Text
+    button ng-click="showError()" Simulate Error
+    button ng-click="showWarning()" Simulate Warning
 
