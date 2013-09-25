@@ -1,7 +1,9 @@
 div [ng-app]
-  form  ng-controller="StartUpController"
-    | Starting :
-    input ng-change="computeNeeded()" ng-model="funding.startingEstimate"
-    | Recommendation : {{ funding.needed }}
-    button ng-click="requestFunding()" Fund my Startup
-    button ng-click="reset()" reset
+
+  div ng-controller="DeathrayMenuController"
+    button ng-click="toggleMenu()" Toggle Menu
+    ul ng-show='menuState.show'
+      li class='menu-disabled-{{isDisabled}}' ng-click='stun()' Stun
+      li ng-click="disintegrage()" Disintegrate
+      li ng-click="erase()" Erase from history
+

@@ -2,17 +2,15 @@
 # Basic
 ### #### #### #### #### #### #### #### #### #### #### #### #### #### #### ####
 
-window.StartUpController = ($scope) ->
-  $scope.funding = { startingEstimate: 0 }
+window.DeathrayMenuController = ($scope) ->
+  $scope.menuState =
+    show: false
 
-  $scope.computeNeeded = ->
-    $scope.funding.needed = $scope.funding.startingEstimate * 10
+  $scope.isDisabled = false
 
-  $scope.requestFunding = ->
-    window.alert(" Sorry please get more customers first.")
+  $scope.toggleMenu = ->
+    console.log($scope)
+    $scope.menuState.show = !$scope.menuState.show;
 
-  $scope.reset = ->
-    $scope.funding.startingEstimate = 0
-    $scope.funding.needed = 0
-
-
+  $scope.stun = () ->
+    $scope.isDisabled = true
