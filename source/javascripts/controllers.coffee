@@ -11,4 +11,8 @@ window.StartUpController = ($scope) ->
   $scope.requestFunding = ->
     window.alert(" Sorry please get more customers first.")
 
+  $scope.reset = ->
+    $scope.funding.startingEstimate = 0
+    $scope.funding.needed = 0
+
 

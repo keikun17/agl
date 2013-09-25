@@ -1,6 +1,7 @@
 div [ng-app]
-  form ng-submit="requestFunding()" ng-controller="StartUpController"
+  form  ng-controller="StartUpController"
     | Starting :
     input ng-change="computeNeeded()" ng-model="funding.startingEstimate"
     | Recommendation : {{ funding.needed }}
-    button Fund my Startup
+    button ng-click="requestFunding()" Fund my Startup
+    button ng-click="reset()" reset
