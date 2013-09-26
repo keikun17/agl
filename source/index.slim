@@ -1,7 +1,10 @@
 div [ng-app]
 
-  div ng-controller="HeaderController"
-    div ng-class="{error: isError, warning: isWarning}" Message Text
-    button ng-click="showError()" Simulate Error
-    button ng-click="showWarning()" Simulate Warning
+  table ng-controller='RestaurantTableController'
+    tr ng-repeat="restaurant in directory" ng-click="selectRestaurant($index)" ng-class='{selected: $index == selectedRow}'
+      td
+        | {{restaurant.name}}
+      td
+        | {{restaurant.cuisine}}
+
 

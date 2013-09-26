@@ -2,16 +2,14 @@
 # Basic
 ### #### #### #### #### #### #### #### #### #### #### #### #### #### #### ####
 
-window.HeaderController = ($scope) ->
-  $scope.isError = false
-  $scope.isWarning = false
+window.RestaurantTableController = ($scope) ->
+  $scope.directory = [
+    {name: 'Rest1', cuisine: 'food1'},
+    {name: 'Rest2', cuisine: 'food2'},
+    {name: 'Rest3', cuisine: 'food3'}
+  ]
 
-  $scope.showError = ->
-    $scope.messageText = "This is an Error!"
-    $scope.isError = true
-    $scope.isWarning = false
+  $scope.selectRestaurant = (row) ->
+    $scope.selectedRow = row
 
-  $scope.showWarning = ->
-    $scope.messageText = "This is an Warning!"
-    $scope.isError = false
-    $scope.isWarning = true
+
