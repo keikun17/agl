@@ -1,0 +1,19 @@
+script src="javascripts/cart_controller.js"
+
+div [ng-app]
+  div ng-controller="CartController"
+    div ng-repeat="item in items"
+      span
+        | {{ item.title }}
+        input ng-model="item.quantity"
+        span
+          | {{ item.price }}
+        span
+          | {{ item.price * item.quantity | currency }}
+
+    div
+      | total: {{ totalCart() | currency }}
+    div
+      | discount: {{ bill.discount | currency }}
+    div
+      | total: {{ subtotal() | currency }}
