@@ -3,12 +3,14 @@ script src="javascripts/inventory_controller.js"
 div [ng-app]
 
   div ng-controller='InventoryController'
-    | Bag
-    ul
-      li ng-repeat="item in bag" ng-click="swap($index, bag, pocket)"
-        | {{item}}
+    div
+      h4 Bag
+      select multiple="" ng-options="item for item in bag" ng-model="bag_selection"
 
-    | Pocket
-    ul
-      li ng-repeat="item in pocket" ng-click="swap($index, pocket, bag)"
-        | {{item}}
+    div
+      button ng-click="swap()" SWAP
+
+
+    div
+      h4 Pocket
+      select multiple="" ng-options="item for item in pocket" ng-model="pocket_selection"
