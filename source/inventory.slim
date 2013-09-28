@@ -1,0 +1,14 @@
+script src="javascripts/inventory_controller.js"
+
+div [ng-app]
+
+  div ng-controller='InventoryController'
+    | Bag
+    ul
+      li ng-repeat="item in bag" ng-click="swap($index, bag, pocket)"
+        | {{item}}
+
+    | Pocket
+    ul
+      li ng-repeat="item in pocket" ng-click="swap($index, pocket, bag)"
+        | {{item}}
