@@ -9,7 +9,9 @@ window.CartController = ($scope) ->
 
 
   $scope.totalCart = ->
+
     i = 0
+    total = 0
     len = $scope.items.length
 
     while i < len
