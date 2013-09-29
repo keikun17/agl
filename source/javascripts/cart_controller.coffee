@@ -8,7 +8,7 @@ window.CartController = ($scope) ->
   ]
 
 
-  $scope.totalCart = ->
+  calculateTotals = ->
 
     i = 0
     total = 0
@@ -18,12 +18,8 @@ window.CartController = ($scope) ->
       total = total + $scope.items[i].price * $scope.items[i].quantity
       i++
 
-    total
+    $scope.bill.total  = total
+    $scope.bill.discount = if total > 100 then 10 else 0
+    $scope.bill.subtotal = total - $scope.bill.discount
 
-  $scope.subtotal = ->
-    $scope.totalCart() - $scope.bill.discount
-
-  window.calculateDiscount = (newValue, oldValue, scope) ->
-    $scope.bill.discount = newValue > 100 ? 10 : 0
-
-  $scope.$watch($scope.totalCart, calculateDiscount)
+  $scope.$watch('items',  calculateTotals, true)

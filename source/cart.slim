@@ -12,8 +12,8 @@ div [ng-app]
           | {{ item.price * item.quantity | currency }}
 
     div
-      | total: {{ totalCart() | currency }}
+      | total: {{ bill.total | currency }}
     div
       | discount: {{ bill.discount | currency }}
     div
-      | total: {{ subtotal() | currency }}
+      | total: {{ bill.subtotal | currency }}
