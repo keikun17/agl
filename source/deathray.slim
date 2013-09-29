@@ -1,0 +1,9 @@
+script src="javascripts/deathray_controller.js"
+link href="/stylesheets/deathray.css" type="text/css" rel="stylesheet"
+
+div ng-app=""
+  div ng-controller="DeathrayController"
+    ul
+      li class="menu-disabled-{{isDisabled}}" ng-click="stun()" Stun
+      li ng-click="disintegrate()" Disintegrate
+      li ng-click="erase()" Erase from history
